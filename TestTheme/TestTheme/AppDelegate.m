@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+Custom.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,64 @@
 
 @implementation AppDelegate
 
++ (UIColor *)colorwithHexString:(NSString *)hexStr alpha:(CGFloat)alpha;
+{
+    //-----------------------------------------
+    // Convert hex string to an integer
+    //-----------------------------------------
+    unsigned int hexint = 0;
+    
+    // Create scanner
+    NSScanner *scanner = [NSScanner scannerWithString:hexStr];
+    
+    // Tell scanner to skip the # character
+    [scanner setCharactersToBeSkipped:[NSCharacterSet
+                                       characterSetWithCharactersInString:@"#"]];
+    [scanner scanHexInt:&hexint];
+    
+    //-----------------------------------------
+    // Create color object, specifying alpha
+    //-----------------------------------------
+    UIColor *color =
+    [UIColor colorWithRed:((CGFloat) ((hexint & 0xFF0000) >> 16))/255
+                    green:((CGFloat) ((hexint & 0xFF00) >> 8))/255
+                     blue:((CGFloat) (hexint & 0xFF))/255
+                    alpha:alpha];
+    
+    return color;
+}
+
+- (void)test{
+    
+
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+//    [[UINavigationBar appearance] lt_setBackgroundColor:[UIColor color1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor color1]];
+//    [[UINavigationBar appearance] setTranslucent:NO];
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor color2],
+//                                                            NSFontAttributeName : [UIFont boldSystemFontOfSize:17]}];
+//
+//    CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64);
+//    UIGraphicsBeginImageContextWithOptions(frame.size, false, 0);
+//    [[[self class] colorwithHexString:@"FB3D4F" alpha:1] setFill];
+//    UIRectFill(frame);
+//    UIImage* navBackgroundImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    [UINavigationBar appearance].layer.contents = (id)navBackgroundImage.CGImage;
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage new]
+//                                                  forBarMetrics:UIBarMetricsDefault]; //UIImageNamed:@"transparent.png"
+//    [UINavigationBar appearance].shadowImage = [UIImage new];////UIImageNamed:@"transparent.png"
+//    [UINavigationBar appearance].backgroundColor = [[self class] colorwithHexString:@"FB3D4F" alpha:1];
+    
+   // [[UINavigationBar appearance] lt_setBackgroundColor:[[self class] colorwithHexString:@"FB3D4F" alpha:1]];
+
     return YES;
 }
 

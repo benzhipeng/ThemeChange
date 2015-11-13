@@ -1,21 +1,21 @@
 //
-//  UIView+Theme.m
+//  UINavigationBar+Theme.m
 //  TestTheme
 //
-//  Created by ben zhipeng on 15/11/4.
+//  Created by ben zhipeng on 15/11/9.
 //  Copyright © 2015年 ben zhipeng. All rights reserved.
 //
 
+#import "UINavigationBar+Theme.h"
 #import "UIView+Theme.h"
 
-@implementation UIView (Theme)
-
+@implementation UINavigationBar (Theme)
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class class = [self class];
-        SEL originalSelector = @selector(setBackgroundColor:);
-        SEL swizzledSelector = @selector(hook_setBackgroundColor:);
+        SEL originalSelector = @selector(setBarTintColor:);
+        SEL swizzledSelector = @selector(hook_setBarTintColor:);
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
         BOOL didAddMethod =
@@ -28,30 +28,16 @@
     });
 }
 
-- (void)hook_setBackgroundColor:(UIColor*)backgroundColor {
-
-    if(backgroundColor && backgroundColor.key){
+- (void)hook_setBarTintColor:(UIColor*)barTintColor {
+    
+    if(barTintColor && barTintColor.key){
         if(!self.key){
-            self.key = backgroundColor.key;
-            [[ThemeManager sharedManager].themeBgObjectDic setThemeObject:self key:self.key];
+            self.key = barTintColor.key;
+            
+            [[ThemeManager sharedManager].themeTintObjectDic setThemeObject:self key:self.key];
         }
     }
-    [self hook_setBackgroundColor:backgroundColor];
+    [self hook_setBarTintColor:barTintColor];
 }
 
-- (void)setKey:(NSString *)key{
-    objc_setAssociatedObject(self, @selector(key), key, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (id)key{
-    id  obj = objc_getAssociatedObject(self, _cmd);
-    return obj;
-}
-
-- (void)dealloc{
-    if(self.key){
-        [[ThemeManager sharedManager] clear];
-        [[ThemeManager sharedManager] log];
-    }
-}
 @end

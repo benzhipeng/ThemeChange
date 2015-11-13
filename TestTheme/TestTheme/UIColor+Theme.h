@@ -12,7 +12,5 @@
 
 @property (nonatomic,strong) NSString*  key;
 
-+ (UIColor*)color1;
 
-+ (UIColor*)color2;
 @end

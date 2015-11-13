@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770FEA661BF0C91D00E5DF14 /* UINavigationBar+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 770FEA651BF0C91D00E5DF14 /* UINavigationBar+Theme.m */; };
+		770FEA691BF0C99600E5DF14 /* UIButton+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 770FEA681BF0C99600E5DF14 /* UIButton+Theme.m */; };
 		777680E81BE9991A00E842C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 777680E71BE9991A00E842C9 /* main.m */; };
 		777680EB1BE9991A00E842C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777680EA1BE9991A00E842C9 /* AppDelegate.m */; };
 		777680EE1BE9991A00E842C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777680ED1BE9991A00E842C9 /* ViewController.m */; };
@@ -20,6 +22,8 @@
 		777681201BE99FFA00E842C9 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = 7776811F1BE99FFA00E842C9 /* property.json */; };
 		777681231BE9A46800E842C9 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 777681221BE9A46800E842C9 /* ThemeManager.m */; };
 		777681261BEAF27200E842C9 /* UILabel+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 777681251BEAF27200E842C9 /* UILabel+Theme.m */; };
+		7776812C1BEB035200E842C9 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7776812B1BEB035200E842C9 /* TestViewController.m */; };
+		77AF9AF91BF1DE80002323D2 /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AF9AF81BF1DE80002323D2 /* UIColor+Custom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		770FEA641BF0C91D00E5DF14 /* UINavigationBar+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Theme.h"; sourceTree = "<group>"; };
+		770FEA651BF0C91D00E5DF14 /* UINavigationBar+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Theme.m"; sourceTree = "<group>"; };
+		770FEA671BF0C99600E5DF14 /* UIButton+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Theme.h"; sourceTree = "<group>"; };
+		770FEA681BF0C99600E5DF14 /* UIButton+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Theme.m"; sourceTree = "<group>"; };
 		777680E31BE9991A00E842C9 /* TestTheme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTheme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777680E71BE9991A00E842C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		777680E91BE9991A00E842C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +73,10 @@
 		777681221BE9A46800E842C9 /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
 		777681241BEAF27200E842C9 /* UILabel+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Theme.h"; sourceTree = "<group>"; };
 		777681251BEAF27200E842C9 /* UILabel+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Theme.m"; sourceTree = "<group>"; };
+		7776812A1BEB035200E842C9 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		7776812B1BEB035200E842C9 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		77AF9AF71BF1DE80002323D2 /* UIColor+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Custom.h"; sourceTree = "<group>"; };
+		77AF9AF81BF1DE80002323D2 /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Custom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,14 @@
 				777681221BE9A46800E842C9 /* ThemeManager.m */,
 				777681241BEAF27200E842C9 /* UILabel+Theme.h */,
 				777681251BEAF27200E842C9 /* UILabel+Theme.m */,
+				7776812A1BEB035200E842C9 /* TestViewController.h */,
+				7776812B1BEB035200E842C9 /* TestViewController.m */,
+				770FEA641BF0C91D00E5DF14 /* UINavigationBar+Theme.h */,
+				770FEA651BF0C91D00E5DF14 /* UINavigationBar+Theme.m */,
+				770FEA671BF0C99600E5DF14 /* UIButton+Theme.h */,
+				770FEA681BF0C99600E5DF14 /* UIButton+Theme.m */,
+				77AF9AF71BF1DE80002323D2 /* UIColor+Custom.h */,
+				77AF9AF81BF1DE80002323D2 /* UIColor+Custom.m */,
 			);
 			path = TestTheme;
 			sourceTree = "<group>";
@@ -299,7 +319,11 @@
 				7776811E1BE99B2A00E842C9 /* UIColor+Theme.m in Sources */,
 				777680EE1BE9991A00E842C9 /* ViewController.m in Sources */,
 				777680EB1BE9991A00E842C9 /* AppDelegate.m in Sources */,
+				770FEA661BF0C91D00E5DF14 /* UINavigationBar+Theme.m in Sources */,
 				777680E81BE9991A00E842C9 /* main.m in Sources */,
+				77AF9AF91BF1DE80002323D2 /* UIColor+Custom.m in Sources */,
+				770FEA691BF0C99600E5DF14 /* UIButton+Theme.m in Sources */,
+				7776812C1BEB035200E842C9 /* TestViewController.m in Sources */,
 				777681231BE9A46800E842C9 /* ThemeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = TestTheme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benzhipeng.Demo.TestTheme;
@@ -453,7 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = TestTheme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benzhipeng.Demo.TestTheme;

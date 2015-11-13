@@ -9,6 +9,8 @@
 #import "UILabel+Theme.h"
 #import "UIView+Theme.h"
 
+
+
 @implementation UILabel (Theme)
 + (void)load {
     static dispatch_once_t onceToken;
@@ -26,7 +28,6 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
     });
-
 }
 
 - (void)hook_setTextColor:(UIColor*)textColor {
@@ -34,12 +35,10 @@
     if(textColor && textColor.key){
         if(!self.key){
             self.key = textColor.key;
-            [[ThemeManager sharedManager] setTextObject:self forKey:self.key];
+            [[ThemeManager sharedManager].themeTextObjectDic setThemeObject:self key:self.key];
         }
     }
     [self hook_setTextColor:textColor];
 }
-
-
 
 @end

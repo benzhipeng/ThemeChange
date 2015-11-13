@@ -7,7 +7,6 @@
 //
 
 #import "UIColor+Theme.h"
-#import "ThemeManager.h"
 #import <objc/runtime.h>
 @implementation UIColor (Theme)
 
@@ -20,29 +19,5 @@
     return obj;
 }
 
-
-+ (UIColor*)color1{
-    
-    UIColor* color = nil;
-    if([ThemeManager sharedManager].status == 0){
-        color =  [UIColor redColor];
-    }else {
-        color =  [UIColor yellowColor];
-    }
-    color.key = NSStringFromSelector(_cmd);
-    return color;
-}
-
-+ (UIColor*)color2{
-    
-    UIColor* color = nil;
-    if([ThemeManager sharedManager].status == 0){
-        color =  [UIColor whiteColor];
-    }else {
-        color =  [UIColor whiteColor];
-    }
-    color.key = NSStringFromSelector(_cmd);
-    return color;
-}
 
 @end
